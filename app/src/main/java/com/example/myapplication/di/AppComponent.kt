@@ -6,7 +6,6 @@ import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 
-
 @Component(modules = [AppModule::class, AppActivityBindingModule::class, AndroidInjectionModule::class])
 interface AppComponent {
     @Component.Builder
@@ -16,7 +15,6 @@ interface AppComponent {
         fun application(application: Application): Builder
 
         fun build(): AppComponent
-
     }
 
     fun inject(application: MyApplication)
