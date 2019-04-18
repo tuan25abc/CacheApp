@@ -12,9 +12,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/five_dp"
+            android:text="@string/googlesamples"
+            android:inputType="text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill,LabelFor"/>
 
     <Button
             android:id="@+id/button"
