@@ -1,8 +1,8 @@
 package com.example.myapplication.ui.main
 
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.model.Repo
 import kotlinx.android.synthetic.main.item_main.view.*
