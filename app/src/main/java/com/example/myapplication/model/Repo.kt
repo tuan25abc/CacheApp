@@ -2,7 +2,7 @@ package com.example.myapplication.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Repo (
+data class Repo(
     @SerializedName("id")
     var id: Int = 0,
 
@@ -16,7 +16,7 @@ data class Repo (
     var fullName: String = "",
 
     @SerializedName("private")
-    var _private: Boolean = false,
+    var private: Boolean = false,
 
     @SerializedName("owner")
     var owner: Owner = Owner(),

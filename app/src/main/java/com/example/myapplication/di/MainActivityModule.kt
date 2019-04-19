@@ -1,7 +1,9 @@
 package com.example.myapplication.di
 
 import com.example.myapplication.helper.Constant.BASE_URL
+import com.example.myapplication.helper.CustomTypeAdapterFactory
 import com.example.myapplication.service.APIService
+import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import io.reactivex.disposables.CompositeDisposable
@@ -23,7 +25,13 @@ abstract class MainActivityModule {
         fun provideAPIService(): APIService = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(
+                GsonConverterFactory.create(
+                    GsonBuilder().registerTypeAdapterFactory(
+                        CustomTypeAdapterFactory()
+                    ).create()
+                )
+            )
             .build().create(APIService::class.java)
     }
 }
